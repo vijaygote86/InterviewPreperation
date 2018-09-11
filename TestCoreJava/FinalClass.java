@@ -15,12 +15,12 @@ public final class FinalClass {
 	{
 		this.id = id;
 		this.name = name;
-//		List<String> tempList = new ArrayList<String>();
-//		Iterator<String> itr = list.iterator();
-//		while(itr.hasNext())
-//		{
-//			tempList.add(itr.next());
-//		}
+		List<String> tempList = new ArrayList<String>();
+		Iterator<String> itr = list.iterator();
+		while(itr.hasNext())
+		{
+			tempList.add(itr.next());
+		}
 		this.itemList=list;
 		
 //		HashMap<Integer, String> tempMap = new HashMap<Integer, String>();
