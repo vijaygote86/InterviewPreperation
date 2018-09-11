@@ -1,0 +1,7 @@
+package src.test.java.designpatterns.structural.bridge;
+
+public interface Color {
+	
+	public void applyColor();
+
+}
