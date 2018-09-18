@@ -1,0 +1,13 @@
+
+
+Functional Interface in Java 8 :
+1. Functional interface has only one abstract method.
+2. Functional interface can have multiple default or static methods. 
+3. Java.util.function has many functional interfaces:
+	e.g. Predicate, BinaryOperator, Function
+4. @FunctionalInterface annotation is used to ensure interface will not have more than one abstract method.
+5. Use of @FunctionalInterface annotation is optional.
+6. Java does not support multiple inheritance but supports multiple interface inheritance hence introduced 
+	functional interface.
+7. Abstract class can define constructor. They are more structured and can have state associated with them.
+

@@ -1,58 +1,51 @@
 
 public class MyStack {
 	
+	private int maxSize;
 	private int top;
-	private long[] myStack;
-	private int actualSize;
+	private long myStack[];
 	
-	public MyStack(int s)
+	public MyStack(int size)
 	{
-		this.actualSize =s;
-		myStack = new long[actualSize];
-		top = -1;
+		this.maxSize = size;
+		this.myStack = new long[maxSize];
+		this.top = -1;
 	}
 	
-	public int size()
+	public boolean isFull()
 	{
-		return this.actualSize;
+		return top == maxSize-1;
 	}
 	
-	public void push(long pushValue)
+	public boolean isEmpty()
 	{
-		myStack[++top] = pushValue;
+		return top == -1;
+	}
+	
+	public void push(long l)
+	{
+		myStack[++top] = l;
 	}
 	
 	public long pop()
 	{
 		return myStack[top--];
 	}
-
-	public boolean isStackFull()
-	{
-		return top == actualSize-1;
-	}
-	
-	public boolean isStackEmpty()
-	{
-		return top ==-1;
-	}
 	
 	public static void main(String[] args) {
 		
-		MyStack stack = new MyStack(10);
-		long pushValue =10l;
-		while(!stack.isStackFull())
+		MyStack myStack = new MyStack(10);
+		long pushedVal = 1L;
+		while(!myStack.isFull())
 		{
-			stack.push(pushValue);
-			System.out.println(pushValue + " pushed into stack");
-			pushValue++;
+			myStack.push(pushedVal);
+			pushedVal++;
 			
 		}
-		System.out.println("*************");
-		
-		while (!stack.isStackEmpty()) {
-			System.out.println("Popped from stack :" +stack.pop());
-			
-		}
+		while(!myStack.isEmpty())
+		{
+			System.out.println(myStack.pop());
+		}	
 	}
+
 }
