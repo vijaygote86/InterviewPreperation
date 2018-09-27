@@ -2,6 +2,32 @@ package com.test.threadlocal;
 
 import java.text.SimpleDateFormat;
 import java.util.Random;
+/*
+ *  
+In Java programming language ThreadLocal class provides another way of thread-safety apart from synchronization.
+ Usually when we have multiple threads sharing an object we need to synchronize the critical section of 
+ the code in order to make it thread safe.
+
+How ThreadLocal class provides thread safety:
+
+ThreadLocal class in Java provides thread-local variables where each thread that accesses one 
+(via its get or set method) has its own, independently initialized copy of the variable. 
+Since each and every thread has its own copy of the object so explicit synchronization is not needed to
+ provide thread safety.
+ Since SimpleDateFormat is not thread safe so in multi-threaded environment it needs to be synchronized like this
+
+public class DateFormatDemo {
+    private DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+    public Date convertStringToDate(String dateString) throws ParseException {
+    Date result;
+    synchronized(df) {
+       result = df.parse(dateString);
+    }
+    return result;
+    }  
+}
+ 
+ */
 
 public class ThreadLocalExample implements Runnable{
 

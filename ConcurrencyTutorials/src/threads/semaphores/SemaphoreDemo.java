@@ -1,4 +1,4 @@
-package com.test.util;
+package threads.semaphores;
 import java.util.concurrent.*;
  
 //A shared resource/class.

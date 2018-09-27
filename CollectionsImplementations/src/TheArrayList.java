@@ -86,5 +86,7 @@ public class TheArrayList {
 		
 		System.out.println("Obect : " + theArrayList.remove(3) + " is removed from arraylist");
 	}
+	
+	
 
 }
